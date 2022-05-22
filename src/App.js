@@ -1,25 +1,47 @@
 import logo from './logo.svg';
 import './App.css';
 
+
 function App() {
+
+const name = 'Xijinping'
+const age = 90;
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>
+        Greetings
+      </h1>
+      <h3><Hello name={name} age={age-30}/></h3>
+      <h4><Hello name="Saya" age={age - 70}/></h4>
+      <h5><Hello name="Orachimaru" age={age* 2.5}/></h5>
+      <h6><Hello name="Hashirama" age={age}/></h6>
+
+        {/* <br /> */}
+        {/* <Figth /> */}
+        {/* <Hello name="Fighter one" /> */}
+        {/* <Figth name="fighter two" /> */}
     </div>
   );
 }
+
+
+const Hello = (props) => {
+  return (
+    <div>
+      <p>Hello {props.name}, you are {props.age} years old</p>
+    </div>
+  )
+}
+
+// const Figth = () => {
+//   return (
+//     <div>
+//       <h3>
+//         Fight me i will win 100%
+//       </h3>
+//     </div>
+//   )
+// }
+
 
 export default App;
